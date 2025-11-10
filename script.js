@@ -1,18 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Menu Mobile Toggle
-    const menuToggle = document.querySelector('.menu-toggle');
-    const mobileNav = document.querySelector('.mobile-nav');
-
-    menuToggle.addEventListener('click', () => {
-        mobileNav.classList.toggle('open');
-    });
     
-    // Tutup menu saat link di klik (di mobile)
-    document.querySelectorAll('.mobile-nav a').forEach(link => {
-        link.addEventListener('click', () => {
-            mobileNav.classList.remove('open');
-        });
-    });
 
     // 2. Smooth Scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
