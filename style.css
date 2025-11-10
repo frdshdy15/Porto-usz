@@ -8,7 +8,46 @@
     --shadow-light: 0 4px 15px rgba(0, 0, 0, 0.07);
     --font-family: 'Poppins', sans-serif;
 }
-.desktop-nav { display: none; }
+/* ==================================== */
+/* 3. MEDIA QUERIES (Responsiveness) */
+/* ==================================== */
+
+@media (min-width: 768px) {
+    .section { padding: 100px 5%; }
+    .menu-toggle { display: none; }
+    .desktop-nav { display: block; }
+    .desktop-nav ul { display: flex; list-style: none; }
+    .desktop-nav ul li a { margin-left: 30px; color: var(--dark-text); }
+    
+    .hero-content h1 { font-size: 4.5em; }
+    .hero-content h2 { font-size: 1.8em; }
+
+    .about-grid { grid-template-columns: 1fr 1fr; }
+
+    .contact-info-grid {
+        flex-direction: row;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero-section { text-align: left; justify-content: space-between; padding: 0 5%; }
+    .hero-content { margin-right: 50px; }
+    .hero-content h1 { font-size: 5.5em; }
+    .about-grid { gap: 50px; }
+    .project-card { 
+        flex-direction: row; 
+        align-items: flex-start;
+        padding: 40px;
+    }
+    .project-card:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+    .project-card .meta-data { min-width: 180px; flex-direction: column; }
+    .project-card .content { flex-grow: 1; padding: 0 40px; }
+}
 * {
     margin: 0;
     padding: 0;
